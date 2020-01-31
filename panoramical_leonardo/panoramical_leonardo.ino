@@ -4,6 +4,10 @@
 // Instantiate a MIDI over USB interface.
 USBMIDI_Interface midi;
 
+CCPotentiometer potentiometer2(A1, {MIDI_CC::Channel_Volume, CHANNEL_0});
+
+CCPotentiometer potentiometer2(A2, {MIDI_CC::Channel_Volume, CHANNEL_1});
+
 // Instantiate a multiplexer
 CD74HC4067 mux = {
   A0,              // analog pin
